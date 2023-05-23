@@ -18,3 +18,4 @@ D:\UNIVERSIDAD\ANÁLISIS Y DISEÑO DE SISTEMAS II\Sistema cancha sintetica\Gesti
 D:\UNIVERSIDAD\ANÁLISIS Y DISEÑO DE SISTEMAS II\Sistema cancha sintetica\Gestion_Alquiler_Canchas\obj\Debug\Gestion_Alquiler_Canchas.Forms.form_Predios.resources
 D:\UNIVERSIDAD\ANÁLISIS Y DISEÑO DE SISTEMAS II\Sistema cancha sintetica\Gestion_Alquiler_Canchas\obj\Debug\Gestion_Alquiler_Canchas.Forms.form_nuevoCliente.resources
 D:\UNIVERSIDAD\ANÁLISIS Y DISEÑO DE SISTEMAS II\Sistema cancha sintetica\Gestion_Alquiler_Canchas\obj\Debug\Gestion_Alquiler_Canchas.Forms.form_modificarCliente.resources
+D:\UNIVERSIDAD\ANÁLISIS Y DISEÑO DE SISTEMAS II\Sistema cancha sintetica\Gestion_Alquiler_Canchas\obj\Debug\Gestion_Alquiler_Canchas.Forms.form_nuevaReserva.resources

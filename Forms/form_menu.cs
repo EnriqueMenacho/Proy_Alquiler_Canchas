@@ -78,5 +78,30 @@ namespace Gestion_Alquiler_Canchas.Forms
         {
 
         }
+
+        private void ptb_NuevoUsusario_MouseHover(object sender, EventArgs e)
+        {
+            ptb_NuevoUsusario.Size = new Size(150, 160);
+        }
+
+        private void ptb_NuevoUsusario_MouseLeave(object sender, EventArgs e)
+        {
+            ptb_NuevoUsusario.Size = new Size(142, 142);
+        }
+
+        private void ptb_NuevoUsusario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ptb_Reportes_MouseHover(object sender, EventArgs e)
+        {
+            ptb_Reportes.Size = new Size(150, 160);
+        }
+
+        private void ptb_Reportes_MouseLeave(object sender, EventArgs e)
+        {
+            ptb_Reportes.Size = new Size(142, 142);
+        }
     }
 }

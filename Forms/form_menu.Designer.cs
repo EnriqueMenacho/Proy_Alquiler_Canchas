@@ -38,6 +38,10 @@
             this.pnPredios = new System.Windows.Forms.Panel();
             this.ptbPredios = new System.Windows.Forms.PictureBox();
             this.lblPredios = new System.Windows.Forms.Label();
+            this.btn_CerrarSesion = new System.Windows.Forms.Button();
+            this.ptb_NuevoUsusario = new System.Windows.Forms.PictureBox();
+            this.ptb_Reportes = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureMinimizar = new System.Windows.Forms.PictureBox();
             this.pictureClose = new System.Windows.Forms.PictureBox();
             this.pnClientes.SuspendLayout();
@@ -46,6 +50,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbAlquilerReserva)).BeginInit();
             this.pnPredios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPredios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_NuevoUsusario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_Reportes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).BeginInit();
             this.SuspendLayout();
@@ -154,6 +161,57 @@
             this.lblPredios.Text = " NUESTROS \r\n   PREDIOS";
             this.lblPredios.Click += new System.EventHandler(this.lblCliente_Click);
             // 
+            // btn_CerrarSesion
+            // 
+            this.btn_CerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(36)))));
+            this.btn_CerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_CerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_CerrarSesion.Font = new System.Drawing.Font("Unispace", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btn_CerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btn_CerrarSesion.Location = new System.Drawing.Point(1043, 555);
+            this.btn_CerrarSesion.Name = "btn_CerrarSesion";
+            this.btn_CerrarSesion.Size = new System.Drawing.Size(123, 60);
+            this.btn_CerrarSesion.TabIndex = 9;
+            this.btn_CerrarSesion.Text = "CERRAR\r\nSESION";
+            this.btn_CerrarSesion.UseVisualStyleBackColor = false;
+            // 
+            // ptb_NuevoUsusario
+            // 
+            this.ptb_NuevoUsusario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptb_NuevoUsusario.Image = global::Gestion_Alquiler_Canchas.Properties.Resources.NUEVO_USUARIOMenu;
+            this.ptb_NuevoUsusario.Location = new System.Drawing.Point(1035, 389);
+            this.ptb_NuevoUsusario.Name = "ptb_NuevoUsusario";
+            this.ptb_NuevoUsusario.Size = new System.Drawing.Size(142, 142);
+            this.ptb_NuevoUsusario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_NuevoUsusario.TabIndex = 8;
+            this.ptb_NuevoUsusario.TabStop = false;
+            this.ptb_NuevoUsusario.Click += new System.EventHandler(this.ptb_NuevoUsusario_Click);
+            this.ptb_NuevoUsusario.MouseLeave += new System.EventHandler(this.ptb_NuevoUsusario_MouseLeave);
+            this.ptb_NuevoUsusario.MouseHover += new System.EventHandler(this.ptb_NuevoUsusario_MouseHover);
+            // 
+            // ptb_Reportes
+            // 
+            this.ptb_Reportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptb_Reportes.Image = global::Gestion_Alquiler_Canchas.Properties.Resources.ResportesMenu;
+            this.ptb_Reportes.Location = new System.Drawing.Point(1035, 235);
+            this.ptb_Reportes.Name = "ptb_Reportes";
+            this.ptb_Reportes.Size = new System.Drawing.Size(142, 142);
+            this.ptb_Reportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_Reportes.TabIndex = 8;
+            this.ptb_Reportes.TabStop = false;
+            this.ptb_Reportes.MouseLeave += new System.EventHandler(this.ptb_Reportes_MouseLeave);
+            this.ptb_Reportes.MouseHover += new System.EventHandler(this.ptb_Reportes_MouseHover);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Gestion_Alquiler_Canchas.Properties.Resources.circuloMenu;
+            this.pictureBox1.Location = new System.Drawing.Point(1035, 81);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(142, 142);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // pictureMinimizar
             // 
             this.pictureMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pictureMinimizar.Image")));
@@ -182,6 +240,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.btn_CerrarSesion);
+            this.Controls.Add(this.ptb_NuevoUsusario);
+            this.Controls.Add(this.ptb_Reportes);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureMinimizar);
             this.Controls.Add(this.pictureClose);
             this.Controls.Add(this.pnPredios);
@@ -200,6 +262,9 @@
             this.pnPredios.ResumeLayout(false);
             this.pnPredios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPredios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_NuevoUsusario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_Reportes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).EndInit();
             this.ResumeLayout(false);
@@ -219,5 +284,9 @@
         private System.Windows.Forms.PictureBox ptbCliente;
         private System.Windows.Forms.PictureBox ptbAlquilerReserva;
         private System.Windows.Forms.PictureBox ptbPredios;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptb_Reportes;
+        private System.Windows.Forms.PictureBox ptb_NuevoUsusario;
+        private System.Windows.Forms.Button btn_CerrarSesion;
     }
 }

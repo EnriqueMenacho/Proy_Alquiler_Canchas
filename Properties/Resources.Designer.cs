@@ -73,6 +73,16 @@ namespace Gestion_Alquiler_Canchas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap circuloMenu {
+            get {
+                object obj = ResourceManager.GetObject("circuloMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_cliente {
             get {
                 object obj = ResourceManager.GetObject("delete-cliente", resourceCulture);
@@ -86,6 +96,16 @@ namespace Gestion_Alquiler_Canchas.Properties {
         internal static System.Drawing.Bitmap edit_cliente {
             get {
                 object obj = ResourceManager.GetObject("edit_cliente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eliminar_predio {
+            get {
+                object obj = ResourceManager.GetObject("eliminar_predio", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +153,49 @@ namespace Gestion_Alquiler_Canchas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap new_reserva {
+            get {
+                object obj = ResourceManager.GetObject("new_reserva", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap notes {
             get {
                 object obj = ResourceManager.GetObject("notes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NUEVO_USUARIOMenu {
+            get {
+                object obj = ResourceManager.GetObject("NUEVO_USUARIOMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PRUEBA_JPG {
+            get {
+                object obj = ResourceManager.GetObject("PRUEBA_JPG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ResportesMenu {
+            get {
+                object obj = ResourceManager.GetObject("ResportesMenu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

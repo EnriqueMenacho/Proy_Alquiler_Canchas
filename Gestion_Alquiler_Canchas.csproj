@@ -94,6 +94,12 @@
     <Compile Include="Forms\form_modificarCliente.Designer.cs">
       <DependentUpon>form_modificarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\form_nuevaReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\form_nuevaReserva.Designer.cs">
+      <DependentUpon>form_nuevaReserva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\form_nuevoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\form_modificarCliente.resx">
       <DependentUpon>form_modificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\form_nuevaReserva.resx">
+      <DependentUpon>form_nuevaReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\form_nuevoCliente.resx">
       <DependentUpon>form_nuevoCliente.cs</DependentUpon>
@@ -201,6 +210,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\homeWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_reserva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circuloMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ResportesMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NUEVO_USUARIOMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar_predio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PRUEBA_JPG.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
