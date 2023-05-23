@@ -79,6 +79,7 @@
             this.lblModificarCliente.TabIndex = 14;
             this.lblModificarCliente.Text = "Modificar\r\nCliente";
             this.lblModificarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblModificarCliente.Click += new System.EventHandler(this.ptbModificarCliente_Click);
             // 
             // lblNuevoCliente
             // 
@@ -92,6 +93,7 @@
             this.lblNuevoCliente.TabIndex = 15;
             this.lblNuevoCliente.Text = "Agragar\r\nPredio";
             this.lblNuevoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNuevoCliente.Click += new System.EventHandler(this.ptbNuevoCliente_Click);
             // 
             // lbl_tituloCliente
             // 
@@ -127,6 +129,7 @@
             this.ptbModificarCliente.TabIndex = 11;
             this.ptbModificarCliente.TabStop = false;
             this.ptbModificarCliente.Tag = "";
+            this.ptbModificarCliente.Click += new System.EventHandler(this.ptbModificarCliente_Click);
             // 
             // ptbNuevoCliente
             // 
@@ -139,6 +142,7 @@
             this.ptbNuevoCliente.TabIndex = 12;
             this.ptbNuevoCliente.TabStop = false;
             this.ptbNuevoCliente.Tag = "";
+            this.ptbNuevoCliente.Click += new System.EventHandler(this.ptbNuevoCliente_Click);
             // 
             // pictureBox1
             // 

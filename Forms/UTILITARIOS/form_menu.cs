@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestion_Alquiler_Canchas.Forms.UTILITARIOS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -91,7 +92,8 @@ namespace Gestion_Alquiler_Canchas.Forms
 
         private void ptb_NuevoUsusario_Click(object sender, EventArgs e)
         {
-
+            form_nuevoUsuario pantalla = new form_nuevoUsuario();
+            pantalla.Show();
         }
 
         private void ptb_Reportes_MouseHover(object sender, EventArgs e)
@@ -102,6 +104,12 @@ namespace Gestion_Alquiler_Canchas.Forms
         private void ptb_Reportes_MouseLeave(object sender, EventArgs e)
         {
             ptb_Reportes.Size = new Size(142, 142);
+        }
+
+        private void ptb_Reportes_Click(object sender, EventArgs e)
+        {
+            form_reportes pantalla = new form_reportes();
+            pantalla.Show();
         }
     }
 }

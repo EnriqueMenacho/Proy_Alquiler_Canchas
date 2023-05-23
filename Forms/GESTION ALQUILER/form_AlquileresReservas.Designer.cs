@@ -61,6 +61,7 @@
             this.pnl_NuevaReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(36)))));
             this.pnl_NuevaReserva.Controls.Add(this.lbl_NuevaReserva);
             this.pnl_NuevaReserva.Controls.Add(this.ptbNuevaReserva);
+            this.pnl_NuevaReserva.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnl_NuevaReserva.Location = new System.Drawing.Point(47, 94);
             this.pnl_NuevaReserva.Name = "pnl_NuevaReserva";
             this.pnl_NuevaReserva.Size = new System.Drawing.Size(318, 505);
@@ -70,6 +71,7 @@
             // lbl_NuevaReserva
             // 
             this.lbl_NuevaReserva.AutoSize = true;
+            this.lbl_NuevaReserva.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_NuevaReserva.Font = new System.Drawing.Font("Stencil", 35.25F, System.Drawing.FontStyle.Bold);
             this.lbl_NuevaReserva.ForeColor = System.Drawing.Color.White;
             this.lbl_NuevaReserva.Location = new System.Drawing.Point(44, 353);
@@ -82,6 +84,7 @@
             // 
             // ptbNuevaReserva
             // 
+            this.ptbNuevaReserva.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbNuevaReserva.Image = global::Gestion_Alquiler_Canchas.Properties.Resources.new_reserva;
             this.ptbNuevaReserva.Location = new System.Drawing.Point(-15, 11);
             this.ptbNuevaReserva.Name = "ptbNuevaReserva";
@@ -144,6 +147,7 @@
             // 
             // btn_home
             // 
+            this.btn_home.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_home.Image = global::Gestion_Alquiler_Canchas.Properties.Resources.homeWhite;
             this.btn_home.Location = new System.Drawing.Point(12, 12);
             this.btn_home.Name = "btn_home";

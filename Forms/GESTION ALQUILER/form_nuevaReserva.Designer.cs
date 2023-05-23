@@ -89,6 +89,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Khaki;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
             this.button2.Location = new System.Drawing.Point(778, 279);
@@ -101,6 +102,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Khaki;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(636, 279);
@@ -122,6 +124,7 @@
             // 
             // cb_HoraInicio
             // 
+            this.cb_HoraInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb_HoraInicio.DropDownHeight = 200;
             this.cb_HoraInicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_HoraInicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -176,6 +179,7 @@
             // 
             // cb_ElegirCancha
             // 
+            this.cb_ElegirCancha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb_ElegirCancha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_ElegirCancha.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cb_ElegirCancha.FormattingEnabled = true;
@@ -281,6 +285,7 @@
             // btnCancelar_NC
             // 
             this.btnCancelar_NC.BackColor = System.Drawing.Color.Khaki;
+            this.btnCancelar_NC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar_NC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar_NC.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
             this.btnCancelar_NC.Location = new System.Drawing.Point(586, 508);
@@ -294,6 +299,7 @@
             // btnGuardar_NC
             // 
             this.btnGuardar_NC.BackColor = System.Drawing.Color.Khaki;
+            this.btnGuardar_NC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar_NC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar_NC.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
             this.btnGuardar_NC.Location = new System.Drawing.Point(430, 508);

@@ -62,6 +62,7 @@
             this.pnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(62)))), ((int)(((byte)(58)))));
             this.pnClientes.Controls.Add(this.ptbCliente);
             this.pnClientes.Controls.Add(this.lblClientes);
+            this.pnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnClientes.Location = new System.Drawing.Point(12, 12);
             this.pnClientes.Name = "pnClientes";
             this.pnClientes.Size = new System.Drawing.Size(331, 625);
@@ -71,6 +72,7 @@
             // 
             // ptbCliente
             // 
+            this.ptbCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbCliente.Image = global::Gestion_Alquiler_Canchas.Properties.Resources.user;
             this.ptbCliente.Location = new System.Drawing.Point(19, 105);
             this.ptbCliente.Name = "ptbCliente";
@@ -83,6 +85,7 @@
             // lblClientes
             // 
             this.lblClientes.AutoSize = true;
+            this.lblClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblClientes.Font = new System.Drawing.Font("Stencil", 35.25F, System.Drawing.FontStyle.Bold);
             this.lblClientes.ForeColor = System.Drawing.Color.White;
             this.lblClientes.Location = new System.Drawing.Point(36, 432);
@@ -97,6 +100,7 @@
             this.pnAlquilerReservas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
             this.pnAlquilerReservas.Controls.Add(this.ptbAlquilerReserva);
             this.pnAlquilerReservas.Controls.Add(this.lblAlquilerReservas);
+            this.pnAlquilerReservas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnAlquilerReservas.Location = new System.Drawing.Point(349, 12);
             this.pnAlquilerReservas.Name = "pnAlquilerReservas";
             this.pnAlquilerReservas.Size = new System.Drawing.Size(331, 625);
@@ -106,6 +110,7 @@
             // 
             // ptbAlquilerReserva
             // 
+            this.ptbAlquilerReserva.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbAlquilerReserva.Image = global::Gestion_Alquiler_Canchas.Properties.Resources.notes;
             this.ptbAlquilerReserva.Location = new System.Drawing.Point(66, 105);
             this.ptbAlquilerReserva.Name = "ptbAlquilerReserva";
@@ -118,6 +123,7 @@
             // lblAlquilerReservas
             // 
             this.lblAlquilerReservas.AutoSize = true;
+            this.lblAlquilerReservas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblAlquilerReservas.Font = new System.Drawing.Font("Stencil", 35.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlquilerReservas.ForeColor = System.Drawing.Color.White;
             this.lblAlquilerReservas.Location = new System.Drawing.Point(29, 410);
@@ -132,6 +138,7 @@
             this.pnPredios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(48)))), ((int)(((byte)(68)))));
             this.pnPredios.Controls.Add(this.ptbPredios);
             this.pnPredios.Controls.Add(this.lblPredios);
+            this.pnPredios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnPredios.Location = new System.Drawing.Point(686, 12);
             this.pnPredios.Name = "pnPredios";
             this.pnPredios.Size = new System.Drawing.Size(331, 625);
@@ -140,6 +147,7 @@
             // 
             // ptbPredios
             // 
+            this.ptbPredios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbPredios.Image = global::Gestion_Alquiler_Canchas.Properties.Resources.football_field;
             this.ptbPredios.Location = new System.Drawing.Point(30, 105);
             this.ptbPredios.Name = "ptbPredios";
@@ -152,6 +160,7 @@
             // lblPredios
             // 
             this.lblPredios.AutoSize = true;
+            this.lblPredios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblPredios.Font = new System.Drawing.Font("Stencil", 35.25F, System.Drawing.FontStyle.Bold);
             this.lblPredios.ForeColor = System.Drawing.Color.White;
             this.lblPredios.Location = new System.Drawing.Point(20, 410);
@@ -199,11 +208,13 @@
             this.ptb_Reportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptb_Reportes.TabIndex = 8;
             this.ptb_Reportes.TabStop = false;
+            this.ptb_Reportes.Click += new System.EventHandler(this.ptb_Reportes_Click);
             this.ptb_Reportes.MouseLeave += new System.EventHandler(this.ptb_Reportes_MouseLeave);
             this.ptb_Reportes.MouseHover += new System.EventHandler(this.ptb_Reportes_MouseHover);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.pictureBox1.Image = global::Gestion_Alquiler_Canchas.Properties.Resources.circuloMenu;
             this.pictureBox1.Location = new System.Drawing.Point(1035, 81);
             this.pictureBox1.Name = "pictureBox1";

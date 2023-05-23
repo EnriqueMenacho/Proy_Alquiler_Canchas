@@ -64,79 +64,109 @@
     </Compile>
     <Compile Include="ConeccionBD\ConeccionDB.cs" />
     <Compile Include="ConeccionBD\StoredProcuderes.cs" />
-    <Compile Include="Forms\form_AlquileresReservas.cs">
+    <Compile Include="Forms\GESTION ALQUILER\form_AlquileresReservas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\form_AlquileresReservas.Designer.cs">
+    <Compile Include="Forms\GESTION ALQUILER\form_AlquileresReservas.Designer.cs">
       <DependentUpon>form_AlquileresReservas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\form_clientes.cs">
+    <Compile Include="Forms\GESTION CLIENTES\form_clientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\form_clientes.Designer.cs">
+    <Compile Include="Forms\GESTION CLIENTES\form_clientes.Designer.cs">
       <DependentUpon>form_clientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\form_menu.cs">
+    <Compile Include="Forms\GESTION PREDIOS\form_agregarPredio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\form_menu.Designer.cs">
+    <Compile Include="Forms\GESTION PREDIOS\form_agregarPredio.Designer.cs">
+      <DependentUpon>form_agregarPredio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GESTION PREDIOS\form_modificarPredios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GESTION PREDIOS\form_modificarPredios.Designer.cs">
+      <DependentUpon>form_modificarPredios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UTILITARIOS\form_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UTILITARIOS\form_menu.Designer.cs">
       <DependentUpon>form_menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\form_login.cs">
+    <Compile Include="Forms\UTILITARIOS\form_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\form_login.Designer.cs">
+    <Compile Include="Forms\UTILITARIOS\form_login.Designer.cs">
       <DependentUpon>form_login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\form_modificarCliente.cs">
+    <Compile Include="Forms\GESTION CLIENTES\form_modificarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\form_modificarCliente.Designer.cs">
+    <Compile Include="Forms\GESTION CLIENTES\form_modificarCliente.Designer.cs">
       <DependentUpon>form_modificarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\form_nuevaReserva.cs">
+    <Compile Include="Forms\GESTION ALQUILER\form_nuevaReserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\form_nuevaReserva.Designer.cs">
+    <Compile Include="Forms\GESTION ALQUILER\form_nuevaReserva.Designer.cs">
       <DependentUpon>form_nuevaReserva.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\form_nuevoCliente.cs">
+    <Compile Include="Forms\GESTION CLIENTES\form_nuevoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\form_nuevoCliente.Designer.cs">
+    <Compile Include="Forms\GESTION CLIENTES\form_nuevoCliente.Designer.cs">
       <DependentUpon>form_nuevoCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\form_Predios.cs">
+    <Compile Include="Forms\GESTION PREDIOS\form_Predios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\form_Predios.Designer.cs">
+    <Compile Include="Forms\GESTION PREDIOS\form_Predios.Designer.cs">
       <DependentUpon>form_Predios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UTILITARIOS\form_nuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UTILITARIOS\form_nuevoUsuario.Designer.cs">
+      <DependentUpon>form_nuevoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UTILITARIOS\form_reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UTILITARIOS\form_reportes.Designer.cs">
+      <DependentUpon>form_reportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\form_AlquileresReservas.resx">
+    <EmbeddedResource Include="Forms\GESTION ALQUILER\form_AlquileresReservas.resx">
       <DependentUpon>form_AlquileresReservas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\form_clientes.resx">
+    <EmbeddedResource Include="Forms\GESTION CLIENTES\form_clientes.resx">
       <DependentUpon>form_clientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\form_menu.resx">
+    <EmbeddedResource Include="Forms\UTILITARIOS\form_menu.resx">
       <DependentUpon>form_menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\form_login.resx">
+    <EmbeddedResource Include="Forms\UTILITARIOS\form_login.resx">
       <DependentUpon>form_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\form_modificarCliente.resx">
+    <EmbeddedResource Include="Forms\GESTION CLIENTES\form_modificarCliente.resx">
       <DependentUpon>form_modificarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\form_nuevaReserva.resx">
+    <EmbeddedResource Include="Forms\GESTION ALQUILER\form_nuevaReserva.resx">
       <DependentUpon>form_nuevaReserva.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\form_nuevoCliente.resx">
+    <EmbeddedResource Include="Forms\GESTION CLIENTES\form_nuevoCliente.resx">
       <DependentUpon>form_nuevoCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\form_Predios.resx">
+    <EmbeddedResource Include="Forms\GESTION PREDIOS\form_Predios.resx">
       <DependentUpon>form_Predios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UTILITARIOS\form_nuevoUsuario.resx">
+      <DependentUpon>form_nuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UTILITARIOS\form_reportes.resx">
+      <DependentUpon>form_reportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
