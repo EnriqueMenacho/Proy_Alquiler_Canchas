@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblBuscarCliente_MC = new System.Windows.Forms.Label();
             this.lblNombre_MC = new System.Windows.Forms.Label();
             this.btnCancelar_MC = new System.Windows.Forms.Button();
             this.lblModificarCliente = new System.Windows.Forms.Label();
+            this.btnBuscarCliente_MC = new System.Windows.Forms.Button();
             this.btnActualizar_MC = new System.Windows.Forms.Button();
             this.lblApellido_MC = new System.Windows.Forms.Label();
             this.txtTelefono_MC = new System.Windows.Forms.TextBox();
@@ -41,10 +43,8 @@
             this.txtCarnet_MC = new System.Windows.Forms.TextBox();
             this.lblTelefono_MC = new System.Windows.Forms.Label();
             this.txtApellido_MC = new System.Windows.Forms.TextBox();
-            this.txtNombre_MC = new System.Windows.Forms.TextBox();
             this.txtBuscarCliente_MC = new System.Windows.Forms.TextBox();
-            this.lblBuscarCliente_MC = new System.Windows.Forms.Label();
-            this.btnBuscarCliente_MC = new System.Windows.Forms.Button();
+            this.txtNombre_MC = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(776, 426);
             this.panel1.TabIndex = 6;
+            // 
+            // lblBuscarCliente_MC
+            // 
+            this.lblBuscarCliente_MC.AutoSize = true;
+            this.lblBuscarCliente_MC.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.lblBuscarCliente_MC.ForeColor = System.Drawing.Color.Khaki;
+            this.lblBuscarCliente_MC.Location = new System.Drawing.Point(118, 100);
+            this.lblBuscarCliente_MC.Name = "lblBuscarCliente_MC";
+            this.lblBuscarCliente_MC.Size = new System.Drawing.Size(189, 19);
+            this.lblBuscarCliente_MC.TabIndex = 0;
+            this.lblBuscarCliente_MC.Text = "BUSCAR POR CARNET:";
             // 
             // lblNombre_MC
             // 
@@ -106,6 +117,19 @@
             this.lblModificarCliente.Size = new System.Drawing.Size(358, 40);
             this.lblModificarCliente.TabIndex = 0;
             this.lblModificarCliente.Text = "MODIFICAR CLIENTE";
+            // 
+            // btnBuscarCliente_MC
+            // 
+            this.btnBuscarCliente_MC.BackColor = System.Drawing.Color.Khaki;
+            this.btnBuscarCliente_MC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscarCliente_MC.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
+            this.btnBuscarCliente_MC.Location = new System.Drawing.Point(570, 97);
+            this.btnBuscarCliente_MC.Name = "btnBuscarCliente_MC";
+            this.btnBuscarCliente_MC.Size = new System.Drawing.Size(111, 26);
+            this.btnBuscarCliente_MC.TabIndex = 6;
+            this.btnBuscarCliente_MC.Text = "BUSCAR";
+            this.btnBuscarCliente_MC.UseVisualStyleBackColor = false;
+            this.btnBuscarCliente_MC.Click += new System.EventHandler(this.btnBuscarCliente_MC_Click);
             // 
             // btnActualizar_MC
             // 
@@ -201,15 +225,6 @@
             this.txtApellido_MC.Size = new System.Drawing.Size(367, 26);
             this.txtApellido_MC.TabIndex = 2;
             // 
-            // txtNombre_MC
-            // 
-            this.txtNombre_MC.Enabled = false;
-            this.txtNombre_MC.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.txtNombre_MC.Location = new System.Drawing.Point(263, 153);
-            this.txtNombre_MC.Name = "txtNombre_MC";
-            this.txtNombre_MC.Size = new System.Drawing.Size(367, 26);
-            this.txtNombre_MC.TabIndex = 1;
-            // 
             // txtBuscarCliente_MC
             // 
             this.txtBuscarCliente_MC.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
@@ -218,29 +233,14 @@
             this.txtBuscarCliente_MC.Size = new System.Drawing.Size(243, 26);
             this.txtBuscarCliente_MC.TabIndex = 1;
             // 
-            // lblBuscarCliente_MC
+            // txtNombre_MC
             // 
-            this.lblBuscarCliente_MC.AutoSize = true;
-            this.lblBuscarCliente_MC.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.lblBuscarCliente_MC.ForeColor = System.Drawing.Color.Khaki;
-            this.lblBuscarCliente_MC.Location = new System.Drawing.Point(118, 100);
-            this.lblBuscarCliente_MC.Name = "lblBuscarCliente_MC";
-            this.lblBuscarCliente_MC.Size = new System.Drawing.Size(189, 19);
-            this.lblBuscarCliente_MC.TabIndex = 0;
-            this.lblBuscarCliente_MC.Text = "BUSCAR POR CARNET:";
-            // 
-            // btnBuscarCliente_MC
-            // 
-            this.btnBuscarCliente_MC.BackColor = System.Drawing.Color.Khaki;
-            this.btnBuscarCliente_MC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscarCliente_MC.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
-            this.btnBuscarCliente_MC.Location = new System.Drawing.Point(570, 97);
-            this.btnBuscarCliente_MC.Name = "btnBuscarCliente_MC";
-            this.btnBuscarCliente_MC.Size = new System.Drawing.Size(111, 26);
-            this.btnBuscarCliente_MC.TabIndex = 6;
-            this.btnBuscarCliente_MC.Text = "BUSCAR";
-            this.btnBuscarCliente_MC.UseVisualStyleBackColor = false;
-            this.btnBuscarCliente_MC.Click += new System.EventHandler(this.btnBuscarCliente_MC_Click);
+            this.txtNombre_MC.Enabled = false;
+            this.txtNombre_MC.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.txtNombre_MC.Location = new System.Drawing.Point(263, 153);
+            this.txtNombre_MC.Name = "txtNombre_MC";
+            this.txtNombre_MC.Size = new System.Drawing.Size(367, 26);
+            this.txtNombre_MC.TabIndex = 1;
             // 
             // form_modificarCliente
             // 

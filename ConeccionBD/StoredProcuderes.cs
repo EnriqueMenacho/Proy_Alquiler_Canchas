@@ -57,6 +57,34 @@ namespace Gestion_Alquiler_Canchas.ConeccionBD
            
 
         }
+        
+        public void CargarTablasClientes_Activos(DataGridView data)
+        {
+            using (SqlCommand command = new SqlCommand("CargarTablaCliente_Activos", conexion.abrirBd()))
+            {
+                SqlDataReader resultado;
+                try
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    resultado = command.ExecuteReader();
+                    DataTable tabla = new DataTable();
+                    tabla.Load(resultado);
+                    data.DataSource = tabla;
+          
+                    data.Columns[1].HeaderText = "Tipo de Cliente";
+
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error" + e);
+                }
+                finally
+                {
+                    conexion.cerrarBD();
+                }
+            }
+        }
 
         public void BuscarClientePorCarnet(string carnet , DataGridView dataGrid)
         {

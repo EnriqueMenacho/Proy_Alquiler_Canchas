@@ -35,11 +35,11 @@ namespace Gestion_Alquiler_Canchas.Forms
             DataTable datos = Buscar.BuscarClientePorCarnet(txtBuscarCliente_MC.Text);
             if(datos.Rows.Count > 0 )
             {
-                txtNombre_MC.Text = datos.Rows[0][1].ToString();
-                txtApellido_MC.Text = datos.Rows[0][2].ToString();
-                txtCarnet_MC.Text = datos.Rows[0][3].ToString();
-                txtEmail_MC.Text = datos.Rows[0][4].ToString();
-                txtTelefono_MC.Text = datos.Rows[0][5].ToString();
+                txtNombre_MC.Text = datos.Rows[0][2].ToString();
+                txtApellido_MC.Text = datos.Rows[0][3].ToString();
+                txtCarnet_MC.Text = datos.Rows[0][4].ToString();
+                txtEmail_MC.Text = datos.Rows[0][5].ToString();
+                txtTelefono_MC.Text = datos.Rows[0][6].ToString();
 
                 txtNombre_MC.Enabled = true;
                 txtApellido_MC.Enabled = true;
@@ -63,8 +63,8 @@ namespace Gestion_Alquiler_Canchas.Forms
             {
                 
                 this.Close();
-                form_clientes cargar = new form_clientes();
-                cargar.CargarTabla();
+                //form_clientes cargar = new form_clientes();
+                //cargar.CargarTabla();
 
             }
             else

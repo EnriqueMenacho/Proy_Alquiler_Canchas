@@ -29,19 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_tituloCliente = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Carnet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Historial = new System.Windows.Forms.DataGridViewButtonColumn();
             this.clienteBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.alquiler_CanchasDataSet1 = new Gestion_Alquiler_Canchas.Alquiler_CanchasDataSet1();
             this.lblNuevoCliente = new System.Windows.Forms.Label();
@@ -85,107 +78,32 @@
             this.lbl_tituloCliente.Size = new System.Drawing.Size(279, 64);
             this.lbl_tituloCliente.TabIndex = 0;
             this.lbl_tituloCliente.Text = "CLIENTES";
-            this.lbl_tituloCliente.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView1.AutoGenerateColumns = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.apellidoDataGridViewTextBoxColumn,
-            this.Carnet,
-            this.emailDataGridViewTextBoxColumn,
-            this.telefonoDataGridViewTextBoxColumn,
-            this.Historial});
-            this.dataGridView1.DataSource = this.clienteBindingSource2;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView1.Location = new System.Drawing.Point(64, 333);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.Size = new System.Drawing.Size(1050, 256);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.Frozen = true;
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Frozen = true;
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // apellidoDataGridViewTextBoxColumn
-            // 
-            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.Frozen = true;
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
-            this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.apellidoDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // Carnet
-            // 
-            this.Carnet.DataPropertyName = "Carnet";
-            this.Carnet.Frozen = true;
-            this.Carnet.HeaderText = "Carnet";
-            this.Carnet.Name = "Carnet";
-            this.Carnet.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.Frozen = true;
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // telefonoDataGridViewTextBoxColumn
-            // 
-            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.Frozen = true;
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Historial
-            // 
-            this.Historial.DataPropertyName = "ID";
-            this.Historial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Historial.Frozen = true;
-            this.Historial.HeaderText = "Historial";
-            this.Historial.Name = "Historial";
-            this.Historial.ReadOnly = true;
-            this.Historial.Text = "Historial";
-            this.Historial.UseColumnTextForButtonValue = true;
-            this.Historial.Width = 150;
             // 
             // clienteBindingSource2
             // 
@@ -435,13 +353,6 @@
         private Alquiler_CanchasDataSet1 alquiler_CanchasDataSet1;
         private System.Windows.Forms.BindingSource clienteBindingSource2;
         private Alquiler_CanchasDataSet1TableAdapters.ClienteTableAdapter clienteTableAdapter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Carnet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn Historial;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnActualizar;
         private Alquiler_CanchasDataSet alquiler_CanchasDataSet2;

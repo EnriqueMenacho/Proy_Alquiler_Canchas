@@ -24,35 +24,21 @@ namespace Gestion_Alquiler_Canchas.Forms
         }
         public void CargarTabla()
         {
-            this.clienteTableAdapter1.Fill(this.alquiler_CanchasDataSet1.Cliente);
+            StoredProcuderes storedProcuderes = new StoredProcuderes();
+            storedProcuderes.CargarTablasClientes_Activos(dataGridView1);
         }
         
         public void actualizar_data()
         {
             txtBuscarCi.Clear();
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = clienteBindingSource2;
-            CargarTabla();
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+            this.CargarTabla();
 
         }
 
         private void form_clientes_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'alquiler_CanchasDataSet1.Cliente' Puede moverla o quitarla según sea necesario.
-            this.clienteTableAdapter1.Fill(this.alquiler_CanchasDataSet1.Cliente);
-            // TODO: esta línea de código carga datos en la tabla 'alquiler_CanchasDataSet.Cliente' Puede moverla o quitarla según sea necesario.
-            //this.clienteTableAdapter.Fill(this.alquiler_CanchasDataSet.Cliente);
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            CargarTabla();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -77,16 +63,22 @@ namespace Gestion_Alquiler_Canchas.Forms
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            
          this.actualizar_data();
-
         }
 
         private void ptbModificarCliente_Click(object sender, EventArgs e)
         {
                 form_modificarCliente pantalla = new form_modificarCliente();
+                pantalla.FormClosed += new
+                System.Windows.Forms.FormClosedEventHandler(pantalla_FormClosed);
                 pantalla.Show();
                        
+        }
+        private void pantalla_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            CargarTabla();
+
         }
 
         private void ptbEliminarCliente_Click(object sender, EventArgs e)
@@ -95,6 +87,8 @@ namespace Gestion_Alquiler_Canchas.Forms
             {
                 StoredProcuderes eliminar = new StoredProcuderes();
                 eliminar.EliminarCliente(txtBuscarCi.Text);
+                txtBuscarCi.Clear();
+                CargarTabla();
             }
             else
             {
