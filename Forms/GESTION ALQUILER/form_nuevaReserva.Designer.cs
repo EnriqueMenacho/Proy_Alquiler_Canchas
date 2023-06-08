@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_horaFinal = new System.Windows.Forms.TextBox();
+            this.btn_SumarHoras = new System.Windows.Forms.Button();
+            this.btn_RestarHoras = new System.Windows.Forms.Button();
+            this.txt_horas = new System.Windows.Forms.TextBox();
             this.cb_HoraInicio = new System.Windows.Forms.ComboBox();
             this.Cal_FechaParaAlquilar = new System.Windows.Forms.MonthCalendar();
             this.cb_ElegirCancha = new System.Windows.Forms.ComboBox();
@@ -54,10 +54,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(70)))));
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txt_horaFinal);
+            this.panel1.Controls.Add(this.btn_SumarHoras);
+            this.panel1.Controls.Add(this.btn_RestarHoras);
+            this.panel1.Controls.Add(this.txt_horas);
             this.panel1.Controls.Add(this.cb_HoraInicio);
             this.panel1.Controls.Add(this.Cal_FechaParaAlquilar);
             this.panel1.Controls.Add(this.cb_ElegirCancha);
@@ -78,49 +78,52 @@
             this.panel1.Size = new System.Drawing.Size(1144, 548);
             this.panel1.TabIndex = 0;
             // 
-            // textBox2
+            // txt_horaFinal
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.textBox2.Location = new System.Drawing.Point(850, 279);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(215, 26);
-            this.textBox2.TabIndex = 37;
+            this.txt_horaFinal.Enabled = false;
+            this.txt_horaFinal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.txt_horaFinal.Location = new System.Drawing.Point(850, 279);
+            this.txt_horaFinal.Name = "txt_horaFinal";
+            this.txt_horaFinal.Size = new System.Drawing.Size(215, 26);
+            this.txt_horaFinal.TabIndex = 37;
             // 
-            // button2
+            // btn_SumarHoras
             // 
-            this.button2.BackColor = System.Drawing.Color.Khaki;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(778, 279);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(47, 30);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "+";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_SumarHoras.BackColor = System.Drawing.Color.Khaki;
+            this.btn_SumarHoras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_SumarHoras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_SumarHoras.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
+            this.btn_SumarHoras.Location = new System.Drawing.Point(778, 279);
+            this.btn_SumarHoras.Name = "btn_SumarHoras";
+            this.btn_SumarHoras.Size = new System.Drawing.Size(47, 30);
+            this.btn_SumarHoras.TabIndex = 36;
+            this.btn_SumarHoras.Text = "+";
+            this.btn_SumarHoras.UseVisualStyleBackColor = false;
+            this.btn_SumarHoras.Click += new System.EventHandler(this.btn_SumarHoras_Click);
             // 
-            // button1
+            // btn_RestarHoras
             // 
-            this.button1.BackColor = System.Drawing.Color.Khaki;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(636, 279);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 30);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "-";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_RestarHoras.BackColor = System.Drawing.Color.Khaki;
+            this.btn_RestarHoras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_RestarHoras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_RestarHoras.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
+            this.btn_RestarHoras.Location = new System.Drawing.Point(636, 279);
+            this.btn_RestarHoras.Name = "btn_RestarHoras";
+            this.btn_RestarHoras.Size = new System.Drawing.Size(47, 30);
+            this.btn_RestarHoras.TabIndex = 35;
+            this.btn_RestarHoras.Text = "-";
+            this.btn_RestarHoras.UseVisualStyleBackColor = false;
+            this.btn_RestarHoras.Click += new System.EventHandler(this.btn_RestarHoras_Click);
             // 
-            // textBox1
+            // txt_horas
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(681, 281);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(99, 26);
-            this.textBox1.TabIndex = 34;
-            this.textBox1.Text = "01:00";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_horas.Enabled = false;
+            this.txt_horas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_horas.Location = new System.Drawing.Point(681, 281);
+            this.txt_horas.Name = "txt_horas";
+            this.txt_horas.Size = new System.Drawing.Size(99, 26);
+            this.txt_horas.TabIndex = 34;
+            this.txt_horas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cb_HoraInicio
             // 
@@ -132,44 +135,11 @@
             this.cb_HoraInicio.FormattingEnabled = true;
             this.cb_HoraInicio.IntegralHeight = false;
             this.cb_HoraInicio.ItemHeight = 20;
-            this.cb_HoraInicio.Items.AddRange(new object[] {
-            "07:00",
-            "07:30",
-            "08:00",
-            "08:30",
-            "09:00",
-            "09:30",
-            "10:00",
-            "10:30",
-            "11:00",
-            "11:30",
-            "12:00",
-            "12:30",
-            "13:00",
-            "13:30",
-            "14:00",
-            "14:30",
-            "15:00",
-            "15:30",
-            "16:00",
-            "16:30",
-            "17:00",
-            "17:30",
-            "18:00",
-            "18:30",
-            "19:00",
-            "19:30",
-            "20:00",
-            "20:30",
-            "21:00",
-            "21:30",
-            "22:00",
-            "22:30",
-            "23:00"});
             this.cb_HoraInicio.Location = new System.Drawing.Point(390, 279);
             this.cb_HoraInicio.Name = "cb_HoraInicio";
             this.cb_HoraInicio.Size = new System.Drawing.Size(215, 28);
             this.cb_HoraInicio.TabIndex = 33;
+            this.cb_HoraInicio.SelectedIndexChanged += new System.EventHandler(this.cb_HoraInicio_SelectedIndexChanged);
             // 
             // Cal_FechaParaAlquilar
             // 
@@ -308,6 +278,7 @@
             this.btnGuardar_NC.TabIndex = 20;
             this.btnGuardar_NC.Text = "GUARDAR";
             this.btnGuardar_NC.UseVisualStyleBackColor = false;
+            this.btnGuardar_NC.Click += new System.EventHandler(this.btnGuardar_NC_Click);
             // 
             // lbl_tituloReserva
             // 
@@ -341,10 +312,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_horaFinal;
+        private System.Windows.Forms.Button btn_SumarHoras;
+        private System.Windows.Forms.Button btn_RestarHoras;
+        private System.Windows.Forms.TextBox txt_horas;
         private System.Windows.Forms.ComboBox cb_HoraInicio;
         private System.Windows.Forms.MonthCalendar Cal_FechaParaAlquilar;
         private System.Windows.Forms.ComboBox cb_ElegirCancha;

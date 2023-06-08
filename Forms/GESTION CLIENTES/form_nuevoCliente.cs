@@ -23,7 +23,7 @@ namespace Gestion_Alquiler_Canchas.Forms
             StoredProcuderes NuevoCliene = new StoredProcuderes();
             if (NuevoCliene.AgregarNuevoCliente(txtNombre_NC.Text, txtApellido_NC.Text, txtCarnet_NC.Text, txtEmail_NC.Text, txtTelefono_NC.Text))
             {
-                this.Hide();               
+                this.Close();               
             }
             else
             {

@@ -1,4 +1,5 @@
-﻿using Gestion_Alquiler_Canchas.Forms.GESTION_PREDIOS;
+﻿using Gestion_Alquiler_Canchas.ConeccionBD;
+using Gestion_Alquiler_Canchas.Forms.GESTION_PREDIOS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,17 @@ namespace Gestion_Alquiler_Canchas.Forms
         public form_Predios()
         {
             InitializeComponent();
+        }
+        
+        private void form_Predios_Load(object sender, EventArgs e)
+        {
+            CargarTabla();
+        }
+
+        public void CargarTabla()
+        {
+            StoredProcuderes storedProcuderes = new StoredProcuderes();
+            storedProcuderes.CargarTablasCanchas_Activos(dataGridView1);
         }
 
         private void btn_home_Click(object sender, EventArgs e)
@@ -37,5 +49,7 @@ namespace Gestion_Alquiler_Canchas.Forms
             form_modificarPredios pantalla = new form_modificarPredios();
             pantalla.Show();
         }
+
+      
     }
 }

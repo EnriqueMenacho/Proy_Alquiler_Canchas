@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestion_Alquiler_Canchas.ConeccionBD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,18 @@ namespace Gestion_Alquiler_Canchas.Forms
             InitializeComponent();
         }
 
+        private void form_AlquileresReservas_Load(object sender, EventArgs e)
+        {
+            CargarTablaReservas_Activas();
+        }
+
+        public void CargarTablaReservas_Activas()
+        {
+            StoredProcuderes storedProcuderes = new StoredProcuderes();
+            storedProcuderes.CargarTablasReservas_Activos(dgv_Reservas);
+        }
+
+
         private void btn_home_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -27,7 +40,14 @@ namespace Gestion_Alquiler_Canchas.Forms
         private void pnl_NuevaReserva_Click(object sender, EventArgs e)
         {
             form_nuevaReserva pantalla = new form_nuevaReserva();
+            pantalla.FormClosed += new
+                System.Windows.Forms.FormClosedEventHandler(form_AlquileresReservas_FormClosed);
             pantalla.Show();
+        }
+
+        private void form_AlquileresReservas_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            CargarTablaReservas_Activas();
         }
     }
 }

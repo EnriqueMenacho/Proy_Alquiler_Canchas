@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Linq.Expressions;
 using System.Runtime.Remoting.Messaging;
+using System.Data.OleDb;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Gestion_Alquiler_Canchas.ConeccionBD
 {
@@ -16,7 +18,8 @@ namespace Gestion_Alquiler_Canchas.ConeccionBD
         ConexionBD conexion = new ConexionBD();
         SqlCommand comandoQuery = new SqlCommand();
         
-        
+        //APARTADO LOGIN
+
         public bool SP_ValidadLogin(string usuario, string contraseña)
         {
 
@@ -58,6 +61,8 @@ namespace Gestion_Alquiler_Canchas.ConeccionBD
 
         }
         
+
+        //APARTADO CLIENTES
         public void CargarTablasClientes_Activos(DataGridView data)
         {
             using (SqlCommand command = new SqlCommand("CargarTablaCliente_Activos", conexion.abrirBd()))
@@ -71,8 +76,11 @@ namespace Gestion_Alquiler_Canchas.ConeccionBD
                     DataTable tabla = new DataTable();
                     tabla.Load(resultado);
                     data.DataSource = tabla;
-          
+
+                    data.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                     data.Columns[1].HeaderText = "Tipo de Cliente";
+                    data.Columns[5].MinimumWidth = 220;
+                    data.Columns[3].MinimumWidth = 170;
 
                 }
                 catch (Exception e)
@@ -215,7 +223,7 @@ namespace Gestion_Alquiler_Canchas.ConeccionBD
                 conexion.cerrarBD();
             }
 
-        }
+            }
         }
         public bool EliminarCliente (string carnet)
         {
@@ -248,6 +256,171 @@ namespace Gestion_Alquiler_Canchas.ConeccionBD
             }
             
         }
+
+        //APARTADO PREDIOS 
+
+        public void CargarTablasCanchas_Activos(DataGridView data)
+        {
+            using (SqlCommand command = new SqlCommand("CargarTablaCanchas_Activos", conexion.abrirBd()))
+            {
+                SqlDataReader resultado;
+                try
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    resultado = command.ExecuteReader();
+                    DataTable tabla = new DataTable();
+                    tabla.Load(resultado);
+                    data.DataSource = tabla;
+
+                    data.Columns[3].HeaderText = "Precio Hora";
+                    data.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    data.Columns[2].MinimumWidth =200;
+                    data.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error" + e);
+                }
+                finally
+                {
+                    conexion.cerrarBD();
+                }
+            }
+        }
+
+        //APARTADO RESERVAS
+        public void CargarTablasReservas_Activos(DataGridView data)
+        {
+            using (SqlCommand command = new SqlCommand("CargarTablaReservas_Activas", conexion.abrirBd()))
+            {
+                SqlDataReader resultado;
+                try
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    resultado = command.ExecuteReader();
+                    DataTable tabla = new DataTable();
+                    tabla.Load(resultado);
+                    data.DataSource = tabla;
+
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error" + e);
+                }
+                finally
+                {
+                    conexion.cerrarBD();
+                }
+            }
+        }
+
+        public class Cancha
+        {
+            public string Nombre { get; set; }
+        }
+
+        public void CargarComboBoxReservas(ComboBox comboBox)
+        {
+           using (SqlCommand command = new SqlCommand("ObtenerNombreCancha", conexion.abrirBd()))
+            {
+                SqlDataReader Resultados;
+                try
+                {
+                    Resultados = command.ExecuteReader();
+                    while (Resultados.Read())
+                    {
+                        
+                        Cancha cancha = new Cancha();
+                        cancha.Nombre = Resultados["Nombre"].ToString();
+                        comboBox.Items.Add(cancha.Nombre);
+                    }
+                }
+                catch(Exception e)
+                {
+                    MessageBox.Show("Error" + e);
+                }
+                finally
+                {
+                    conexion.cerrarBD();
+                }
+            }
+        }
+
+
+        public class Horas
+        {
+            public string Hora { get; set; }
+        }
+        public void CargarComboBoxHoras(ComboBox comboBox)
+        {
+            using (SqlCommand command = new SqlCommand("ObtenerHorasReserva", conexion.abrirBd()))
+            {
+                SqlDataReader Resultados;
+                try
+                {
+                    Resultados = command.ExecuteReader();
+                    while (Resultados.Read())
+                    {
+
+                        Horas tiempo = new Horas();
+                        tiempo.Hora = Resultados["Hora"].ToString();
+                        comboBox.Items.Add(tiempo.Hora);
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error" + e);
+                }
+                finally
+                {
+                    conexion.cerrarBD();
+                }
+            }
+        }
+
+        public bool NuevaReserva(string NumeroCarnet,String nombreCancha, 
+            string fecha, string horaInicio, string horaFin, string observaciones)
+        {
+            using (SqlCommand command = new SqlCommand("GuardarReserva", conexion.abrirBd()))
+            {
+                try
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@CarnetCliente", NumeroCarnet);
+                    command.Parameters.AddWithValue("@CanchaNombre", nombreCancha);
+                    command.Parameters.AddWithValue("@fecha", fecha);
+                    command.Parameters.AddWithValue("@HoraInicio", horaInicio);
+                    command.Parameters.AddWithValue("@HoraFin", horaFin);
+                    command.Parameters.AddWithValue("@Observaciones", observaciones);
+
+                    String mensaje = (string)command.ExecuteScalar();
+
+                    MessageBox.Show(mensaje);
+
+                    if (mensaje == "RESERVA CREADA CORRECTAMENTE")
+                        return true;
+                    else
+                        return false;
+
+
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Se ha producido un error: " + ex);
+                    throw ex;
+                }
+                finally
+                {
+                    conexion.cerrarBD();
+                }
+
+            }
+        }
     }
+
 }
 

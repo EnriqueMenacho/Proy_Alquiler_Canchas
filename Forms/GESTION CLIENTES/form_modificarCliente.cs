@@ -61,11 +61,7 @@ namespace Gestion_Alquiler_Canchas.Forms
             StoredProcuderes modificar = new StoredProcuderes();
             if(modificar.modificarCliente(txtNombre_MC.Text, txtApellido_MC.Text, txtCarnet_MC.Text, txtEmail_MC.Text, txtTelefono_MC.Text, txtBuscarCliente_MC.Text))
             {
-                
                 this.Close();
-                //form_clientes cargar = new form_clientes();
-                //cargar.CargarTabla();
-
             }
             else
             {

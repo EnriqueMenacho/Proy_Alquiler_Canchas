@@ -58,6 +58,8 @@ namespace Gestion_Alquiler_Canchas.Forms
         private void ptbNuevoCliente_Click(object sender, EventArgs e)
         {
             form_nuevoCliente pantalla = new form_nuevoCliente();
+            pantalla.FormClosed += new
+            System.Windows.Forms.FormClosedEventHandler(pantalla_FormClosed);
             pantalla.Show();
         }
 
@@ -76,7 +78,6 @@ namespace Gestion_Alquiler_Canchas.Forms
         }
         private void pantalla_FormClosed(object sender, FormClosedEventArgs e)
         {
-
             CargarTabla();
 
         }

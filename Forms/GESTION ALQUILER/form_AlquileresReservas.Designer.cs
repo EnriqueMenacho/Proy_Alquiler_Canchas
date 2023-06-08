@@ -36,12 +36,12 @@
             this.txtBuscarCi = new System.Windows.Forms.TextBox();
             this.btnBuscarCi = new System.Windows.Forms.Button();
             this.lblBuscarReserva = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_Reservas = new System.Windows.Forms.DataGridView();
             this.btn_home = new System.Windows.Forms.PictureBox();
             this.pnl_NuevaReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbNuevaReserva)).BeginInit();
             this.pnl_buscarReserva.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Reservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_home)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,13 +137,16 @@
             this.lblBuscarReserva.TabIndex = 6;
             this.lblBuscarReserva.Text = "BUSCAR RESERVA POR C.I.";
             // 
-            // dataGridView1
+            // dgv_Reservas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(394, 195);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(757, 404);
-            this.dataGridView1.TabIndex = 11;
+            this.dgv_Reservas.AllowUserToAddRows = false;
+            this.dgv_Reservas.AllowUserToDeleteRows = false;
+            this.dgv_Reservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Reservas.Location = new System.Drawing.Point(394, 195);
+            this.dgv_Reservas.Name = "dgv_Reservas";
+            this.dgv_Reservas.ReadOnly = true;
+            this.dgv_Reservas.Size = new System.Drawing.Size(757, 404);
+            this.dgv_Reservas.TabIndex = 11;
             // 
             // btn_home
             // 
@@ -163,7 +166,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(70)))));
             this.ClientSize = new System.Drawing.Size(1184, 611);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_Reservas);
             this.Controls.Add(this.pnl_buscarReserva);
             this.Controls.Add(this.pnl_NuevaReserva);
             this.Controls.Add(this.lbl_tituloReserva);
@@ -173,12 +176,14 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "form_AlquileresReservas";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.form_AlquileresReservas_FormClosed);
+            this.Load += new System.EventHandler(this.form_AlquileresReservas_Load);
             this.pnl_NuevaReserva.ResumeLayout(false);
             this.pnl_NuevaReserva.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbNuevaReserva)).EndInit();
             this.pnl_buscarReserva.ResumeLayout(false);
             this.pnl_buscarReserva.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Reservas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_home)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -194,7 +199,7 @@
         private System.Windows.Forms.TextBox txtBuscarCi;
         private System.Windows.Forms.Button btnBuscarCi;
         private System.Windows.Forms.Label lblBuscarReserva;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_Reservas;
         private System.Windows.Forms.PictureBox ptbNuevaReserva;
         private System.Windows.Forms.Label lbl_NuevaReserva;
     }
