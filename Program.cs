@@ -18,7 +18,7 @@ namespace Gestion_Alquiler_Canchas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new form_menu());
+            Application.Run(new form_login());
         }
     }
 }

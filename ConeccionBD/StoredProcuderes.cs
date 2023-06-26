@@ -317,6 +317,34 @@ namespace Gestion_Alquiler_Canchas.ConeccionBD
             }
         }
 
+        public void BuscarReservaCarnet(string carnet, DataGridView data)
+        {
+            using (SqlCommand command = new SqlCommand("BuscarReservaCarnet", conexion.abrirBd()))
+            {
+                SqlDataReader resultado;
+                try
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@carnet", carnet);
+
+                    resultado = command.ExecuteReader();
+                    DataTable tabla = new DataTable();
+                    tabla.Load(resultado);
+                    data.DataSource = tabla;
+
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error" + e);
+                }
+                finally
+                {
+                    conexion.cerrarBD();
+                }
+            }
+        }
+
         public class Cancha
         {
             public string Nombre { get; set; }
@@ -418,6 +446,39 @@ namespace Gestion_Alquiler_Canchas.ConeccionBD
                     conexion.cerrarBD();
                 }
 
+            }
+        }
+
+        //PROCEDIMIENTO CREAR NUEVO USUARIO 
+        public bool CrearNuevoUsuario (string usuario, string contrasena)
+        {
+            using (SqlCommand command = new SqlCommand("InsertarNuevoUsuario", conexion.abrirBd()))
+            {
+                try
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("Usuario", usuario);
+                    command.Parameters.AddWithValue("Contrasena", contrasena);
+                    
+                    String mensaje = (string)command.ExecuteScalar();
+
+                    MessageBox.Show(mensaje);
+
+                    if (mensaje == "Acceso insertado correctamente")
+                        return true;
+                    else
+                        return false;
+                }
+                catch(SqlException ex)
+                {
+                    MessageBox.Show("Se ha producido un error: " + ex);
+                    throw ex;
+                }
+                finally
+                {
+                    conexion.cerrarBD();
+                }
             }
         }
     }

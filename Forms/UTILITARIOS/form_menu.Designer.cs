@@ -183,6 +183,7 @@
             this.btn_CerrarSesion.TabIndex = 9;
             this.btn_CerrarSesion.Text = "CERRAR\r\nSESION";
             this.btn_CerrarSesion.UseVisualStyleBackColor = false;
+            this.btn_CerrarSesion.Click += new System.EventHandler(this.btn_CerrarSesion_Click);
             // 
             // ptb_NuevoUsusario
             // 

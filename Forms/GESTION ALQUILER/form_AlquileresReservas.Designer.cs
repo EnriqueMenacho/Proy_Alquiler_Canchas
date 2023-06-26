@@ -38,6 +38,7 @@
             this.lblBuscarReserva = new System.Windows.Forms.Label();
             this.dgv_Reservas = new System.Windows.Forms.DataGridView();
             this.btn_home = new System.Windows.Forms.PictureBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.pnl_NuevaReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbNuevaReserva)).BeginInit();
             this.pnl_buscarReserva.SuspendLayout();
@@ -107,7 +108,7 @@
             // txtBuscarCi
             // 
             this.txtBuscarCi.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F);
-            this.txtBuscarCi.Location = new System.Drawing.Point(58, 39);
+            this.txtBuscarCi.Location = new System.Drawing.Point(69, 36);
             this.txtBuscarCi.Name = "txtBuscarCi";
             this.txtBuscarCi.Size = new System.Drawing.Size(489, 35);
             this.txtBuscarCi.TabIndex = 7;
@@ -119,19 +120,20 @@
             this.btnBuscarCi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscarCi.Font = new System.Drawing.Font("Unispace", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnBuscarCi.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarCi.Location = new System.Drawing.Point(567, 36);
+            this.btnBuscarCi.Location = new System.Drawing.Point(578, 33);
             this.btnBuscarCi.Name = "btnBuscarCi";
             this.btnBuscarCi.Size = new System.Drawing.Size(123, 38);
             this.btnBuscarCi.TabIndex = 8;
             this.btnBuscarCi.Text = "BUSCAR";
             this.btnBuscarCi.UseVisualStyleBackColor = false;
+            this.btnBuscarCi.Click += new System.EventHandler(this.btnBuscarCi_Click);
             // 
             // lblBuscarReserva
             // 
             this.lblBuscarReserva.AutoSize = true;
             this.lblBuscarReserva.Font = new System.Drawing.Font("Unispace", 15.75F, System.Drawing.FontStyle.Bold);
             this.lblBuscarReserva.ForeColor = System.Drawing.Color.White;
-            this.lblBuscarReserva.Location = new System.Drawing.Point(64, 11);
+            this.lblBuscarReserva.Location = new System.Drawing.Point(75, 8);
             this.lblBuscarReserva.Name = "lblBuscarReserva";
             this.lblBuscarReserva.Size = new System.Drawing.Size(311, 25);
             this.lblBuscarReserva.TabIndex = 6;
@@ -160,12 +162,29 @@
             this.btn_home.TabStop = false;
             this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.Khaki;
+            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizar.Font = new System.Drawing.Font("Unispace", 8F, System.Drawing.FontStyle.Bold);
+            this.btnActualizar.ForeColor = System.Drawing.Color.Black;
+            this.btnActualizar.Location = new System.Drawing.Point(394, 171);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(97, 23);
+            this.btnActualizar.TabIndex = 12;
+            this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // form_AlquileresReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(70)))));
             this.ClientSize = new System.Drawing.Size(1184, 611);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dgv_Reservas);
             this.Controls.Add(this.pnl_buscarReserva);
             this.Controls.Add(this.pnl_NuevaReserva);
@@ -202,5 +221,6 @@
         private System.Windows.Forms.DataGridView dgv_Reservas;
         private System.Windows.Forms.PictureBox ptbNuevaReserva;
         private System.Windows.Forms.Label lbl_NuevaReserva;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }

@@ -60,7 +60,7 @@ namespace Gestion_Alquiler_Canchas.Forms
             form_nuevoCliente pantalla = new form_nuevoCliente();
             pantalla.FormClosed += new
             System.Windows.Forms.FormClosedEventHandler(pantalla_FormClosed);
-            pantalla.Show();
+            pantalla.ShowDialog();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace Gestion_Alquiler_Canchas.Forms
                 form_modificarCliente pantalla = new form_modificarCliente();
                 pantalla.FormClosed += new
                 System.Windows.Forms.FormClosedEventHandler(pantalla_FormClosed);
-                pantalla.Show();
+                pantalla.ShowDialog();
                        
         }
         private void pantalla_FormClosed(object sender, FormClosedEventArgs e)

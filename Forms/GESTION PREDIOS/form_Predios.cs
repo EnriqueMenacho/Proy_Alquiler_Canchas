@@ -40,14 +40,14 @@ namespace Gestion_Alquiler_Canchas.Forms
         private void ptbNuevoCliente_Click(object sender, EventArgs e)
         {
             form_agregarPredio pantalla = new form_agregarPredio();
-            pantalla.Show();
+            pantalla.ShowDialog();
 
         }
 
         private void ptbModificarCliente_Click(object sender, EventArgs e)
         {
             form_modificarPredios pantalla = new form_modificarPredios();
-            pantalla.Show();
+            pantalla.ShowDialog();
         }
 
       

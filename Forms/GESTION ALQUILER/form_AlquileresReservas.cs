@@ -42,12 +42,24 @@ namespace Gestion_Alquiler_Canchas.Forms
             form_nuevaReserva pantalla = new form_nuevaReserva();
             pantalla.FormClosed += new
                 System.Windows.Forms.FormClosedEventHandler(form_AlquileresReservas_FormClosed);
-            pantalla.Show();
+            pantalla.ShowDialog();
         }
 
         private void form_AlquileresReservas_FormClosed(object sender, FormClosedEventArgs e)
         {
             CargarTablaReservas_Activas();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            txtBuscarCi.Clear();
+            this.CargarTablaReservas_Activas();
+        }
+
+        private void btnBuscarCi_Click(object sender, EventArgs e)
+        {
+            StoredProcuderes BuscarReservaCarnet = new StoredProcuderes();
+            BuscarReservaCarnet.BuscarReservaCarnet(txtBuscarCi.Text,dgv_Reservas);
         }
     }
 }

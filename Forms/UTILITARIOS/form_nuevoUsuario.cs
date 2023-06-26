@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestion_Alquiler_Canchas.ConeccionBD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,29 @@ namespace Gestion_Alquiler_Canchas.Forms.UTILITARIOS
             InitializeComponent();
         }
 
+        public void crearnuevoUsuario(string usuario, string contrasena)
+        {
+            StoredProcuderes NuevoUsuario = new StoredProcuderes(); 
+            NuevoUsuario.CrearNuevoUsuario(usuario, contrasena);
+        }
+
         private void btnCancelar_NC_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void btnGuardar_NC_Click(object sender, EventArgs e)
+        {
+
+            if(txtNuevaContrasena_NC.Text == txtRepetirContrasena_NC.Text){
+                crearnuevoUsuario(txtNuevoUsuario_NC.Text, txtNuevaContrasena_NC.Text);
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("LAS CONTRASEÑAS NO COINCIDEN");
+                txtRepetirContrasena_NC.Clear();
+            }
         }
     }
 }

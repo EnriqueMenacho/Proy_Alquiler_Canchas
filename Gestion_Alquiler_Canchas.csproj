@@ -144,6 +144,12 @@
     <EmbeddedResource Include="Forms\GESTION CLIENTES\form_clientes.resx">
       <DependentUpon>form_clientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GESTION PREDIOS\form_agregarPredio.resx">
+      <DependentUpon>form_agregarPredio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GESTION PREDIOS\form_modificarPredios.resx">
+      <DependentUpon>form_modificarPredios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UTILITARIOS\form_menu.resx">
       <DependentUpon>form_menu.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,4 +1,5 @@
 ﻿using Gestion_Alquiler_Canchas.Forms.UTILITARIOS;
+using GYM_ADS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,34 @@ namespace Gestion_Alquiler_Canchas.Forms
         {
             formulario.Show();
             this.Hide();
+        }
+
+        public void CerrarSesion()
+        {
+            if(
+                MessageBox.Show("¿Esta seguro que desea Cerrar Sesión?", "Cerrar Sesión", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK
+                )
+            {
+                List<Form> ventanasACerrar = new List<Form>();
+
+                // Agregar las ventanas a la lista
+                foreach (Form form in Application.OpenForms)
+                {
+                    if (form.Name != "form_login") // Evitar cerrar la ventana de inicio de sesión
+                        ventanasACerrar.Add(form);
+                }
+
+                // Cerrar las ventanas almacenadas en la lista
+                foreach (Form form in ventanasACerrar)
+                {
+                    form.Close();
+                }
+
+                form_login login = new form_login();  
+                login.Show();
+            }
+
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -110,6 +139,12 @@ namespace Gestion_Alquiler_Canchas.Forms
         {
             form_reportes pantalla = new form_reportes();
             pantalla.Show();
+        }
+
+        private void btn_CerrarSesion_Click(object sender, EventArgs e)
+        {
+            CerrarSesion();
+
         }
     }
 }

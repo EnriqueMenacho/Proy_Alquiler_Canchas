@@ -16,5 +16,15 @@ namespace Gestion_Alquiler_Canchas.Forms.GESTION_PREDIOS
         {
             InitializeComponent();
         }
+
+        private void btnCancelar_MC_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnActualizar_MC_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

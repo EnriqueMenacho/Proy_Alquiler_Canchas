@@ -21,3 +21,5 @@ D:\UNIVERSIDAD\ANÁLISIS Y DISEÑO DE SISTEMAS II\Sistema cancha sintetica\Gesti
 D:\UNIVERSIDAD\ANÁLISIS Y DISEÑO DE SISTEMAS II\Sistema cancha sintetica\Gestion_Alquiler_Canchas\obj\Debug\Gestion_Alquiler_Canchas.csproj.CopyComplete
 D:\UNIVERSIDAD\ANÁLISIS Y DISEÑO DE SISTEMAS II\Sistema cancha sintetica\Gestion_Alquiler_Canchas\obj\Debug\Gestion_Alquiler_Canchas.exe
 D:\UNIVERSIDAD\ANÁLISIS Y DISEÑO DE SISTEMAS II\Sistema cancha sintetica\Gestion_Alquiler_Canchas\obj\Debug\Gestion_Alquiler_Canchas.pdb
+D:\UNIVERSIDAD\ANÁLISIS Y DISEÑO DE SISTEMAS II\Sistema cancha sintetica\Gestion_Alquiler_Canchas\obj\Debug\Gestion_Alquiler_Canchas.Forms.GESTION_PREDIOS.form_agregarPredio.resources
+D:\UNIVERSIDAD\ANÁLISIS Y DISEÑO DE SISTEMAS II\Sistema cancha sintetica\Gestion_Alquiler_Canchas\obj\Debug\Gestion_Alquiler_Canchas.Forms.GESTION_PREDIOS.form_modificarPredios.resources
